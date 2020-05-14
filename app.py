@@ -14,9 +14,9 @@ from dash.dependencies import Input, Output
 
 #%%
 # import excel sheets to load information about confirmed, death and recovered cases to display it in a table
-CONFIRMED_GLOBAL = pd.read_csv('csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv')
-DEATH_GLOBAL = pd.read_csv('csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_global.csv')
-RECOVERED_GLOBAL = pd.read_csv('csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_recovered_global.csv')
+CONFIRMED_GLOBAL = pd.read_csv('time_series_covid19_confirmed_global.csv')
+DEATH_GLOBAL = pd.read_csv('time_series_covid19_deaths_global.csv')
+RECOVERED_GLOBAL = pd.read_csv('time_series_covid19_recovered_global.csv')
 
 CONSOLIDATED_DF = CONFIRMED_GLOBAL.iloc[:, 0:4]
 CONSOLIDATED_DF['Confirmed'] = CONFIRMED_GLOBAL.iloc[:, -1]
